@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Histórico Nacional - Tour Virtual</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="museum-container">
+        <!-- Cabeçalho estilo museu antigo -->
+        <header class="museum-header">
+            <div class="header-content">
+                <h1 class="museum-title">Museu Histórico Nacional</h1>
+                <p class="museum-subtitle">Fundado em 1922</p>
+                <div class="header-ornament"></div>
+            </div>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <div class="exhibition-hall">
+                <!-- Seção do Avatar -->
+                <section class="curator-section">
+                    <div class="curator-card">
+                        <div class="avatar-container">
+                            <div class="avatar" id="animatedAvatar">
+                                <div class="avatar-body">
+                                    <div class="avatar-head">
+                                        <div class="avatar-face">
+                                            <div class="avatar-eyes">
+                                                <div class="eye left-eye"></div>
+                                                <div class="eye right-eye"></div>
+                                            </div>
+                                            <div class="avatar-mouth"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="curator-info">
+                            <h2 class="curator-name">Prof. Almeida</h2>
+                            <p class="curator-title">Curador Chefe do Museu</p>
+                            <div class="years-service">
+                                <span>40 anos de serviço</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="speech-section">
+                        <div class="speech-bubble" id="speechBubble">
+                            <div class="bubble-content">
+                                <p id="speechText">Bem-vindo ao Museu Histórico Nacional. Sou o Professor Almeida e serei seu guia nesta jornada pelo tempo.</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="controls">
+                            <button id="startBtn" class="museum-btn primary">
+                                <span class="btn-icon">▶</span>
+                                Iniciar Tour
+                            </button>
+                            <button id="pauseBtn" class="museum-btn secondary">
+                                <span class="btn-icon">⏸</span>
+                                Pausar
+                            </button>
+                            <button id="repeatBtn" class="museum-btn secondary">
+                                <span class="btn-icon">↺</span>
+                                Repetir
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção da Obra -->
+                <section class="artwork-section">
+                    <div class="artwork-display">
+                        <div class="artwork-frame">
+                            <div class="frame-top"></div>
+                            <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Obra Histórica" class="artwork-image" id="artworkImage">
+                            <div class="frame-bottom"></div>
+                        </div>
+                        
+                        <div class="artwork-info">
+                            <div class="info-plaque">
+                                <h3 id="artworkTitle" class="plaque-title">Retrato da Imperatriz</h3>
+                                <div class="plaque-details">
+                                    <div class="detail-row">
+                                        <span class="detail-label">Artista:</span>
+                                        <span id="artistName" class="detail-value">-</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Data:</span>
+                                        <span id="artworkDate" class="detail-value">-</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Período:</span>
+                                        <span id="artworkPeriod" class="detail-value">-</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="detail-label">Técnica:</span>
+                                        <span id="artworkTechnique" class="detail-value">-</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Simulador QR Code -->
+        <section class="qr-section">
+            <div class="qr-simulator">
+                <h3>Ponto de Tour Virtual</h3>
+                <p>Escaneie o código para acessar esta apresentação</p>
+                <div class="qr-code-placeholder">
+                    <div class="qr-pattern"></div>
+                    <span>QR CODE</span>
+                </div>
+                <button id="simulateQR" class="museum-btn outline">
+                    Simular Leitura do QR Code
+                </button>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="museum-footer">
+            <div class="footer-content">
+                <p>Museu Histórico Nacional &copy; 1922 - 2023</p>
+                <p>Preservando a história para as futuras gerações</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/speech.js"></script>
+    <script src="js/avatar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
